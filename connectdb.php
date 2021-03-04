@@ -14,11 +14,11 @@ $ssl = "require";
 
 $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode".ssl);
 
-if($link === false){
-	die("ERROR: Could not connect.");
-}	else {
-	echo "Connection to Heroku Postgres has been established";
-}
+	if($link === false){
+		die("ERROR: Could not connect.");
+	} else {
+		echo "Connection to Heroku Postgres has been established";
+	}
 $id = mysql_real_escape_string($link, $_REQUEST['id']);
 
 	$id= $_REQUEST["id"];
@@ -52,7 +52,7 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 		echo "Records added successfully.";
 	} else {
 		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
-
+	pg_close($link);
 ?>
 </body>
 </html>
