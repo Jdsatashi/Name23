@@ -1,8 +1,9 @@
 <html>
 <body>
 <p> You have summitted the following to the server: </p>
-Your name: <?php echo $_POST["name"]; ?><br>
-Your email: <?php echo $_POST["email"]; ?><br>
+    <?php echo $_POST["id"]; ?> <br>
+    <?php echo $_POST["name"]; ?> <br>
+    <?php echo $_POST["price"]; ?> <br>
 
 <?php
 $link = pg_connect("host=ec2-34-201-248-246.compute-1.amazonaws.com dbname=da79i3d6vat4tl port=5432 user=tapdzjqevixblx password=adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec sslmode=require");
@@ -12,13 +13,13 @@ $link = pg_connect("host=ec2-34-201-248-246.compute-1.amazonaws.com dbname=da79i
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-/*$id = mysql_real_escape_string($link, $_REQUEST['id']);
+$id = mysql_real_escape_string($link, $_REQUEST['id']);
 
-	$id= $_REQUEST["id"];
-	$name = $_REQUEST['productname'];
+	$id= $_REQUEST['id'];
+	$name = $_REQUEST['product_name'];
 	$cat = $_REQUEST['category'];
 	$price = $_REQUEST['price'];
-	$desc = $_REQUEST['description'];*/
+	$desc = $_REQUEST['description'];
 	
 	//$pid = mysqli_real_escape_string($link, $_REQUEST['id']);
 	//$pname = mysqli_real_escape_string($link, $_REQUEST['name']);
