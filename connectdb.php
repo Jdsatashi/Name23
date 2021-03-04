@@ -1,8 +1,8 @@
 <html>
 <body>
 <p> You have summitted the following to the server: </p>
-    <?php echo $_POST["pid"]; ?> <br>
-    <?php echo $_POST["pname"]; ?> <br>
+    <?php echo $_POST["id"]; ?> <br>
+    <?php echo $_POST["name"]; ?> <br>
     <?php echo $_POST["price"]; ?> <br>
 
 <?php
