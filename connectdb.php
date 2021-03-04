@@ -47,7 +47,6 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	} else {
 		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	}
-	pg_close($link);
 ?>
 </body>
 </html>
