@@ -1,3 +1,4 @@
+<html>
 <?php
 $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
 $dbname = "da79i3d6vat4tl";
@@ -34,4 +35,18 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	echo $price;
 	echo $desc;
 	
+	//$mysqlquery = "INSERT INTO Product (id, product_name, category, price, description) VALUES ('$id', '$name', '$cat', '$price', '$desc')";
+
+	$sql = 'INSERT INTO public."Product" ("id", "product_name", "category", "price", "description") VALUES ('."'$id': :character varying,
+	'$name': :character varying, '$cat': :character varying, '$price': :integer, '$desc': :character varying)".
+	' returning "id"';
+	
+	echo $qsl;
+	
+	if(pg_query($link, $sql)){
+		echo "Records added successfully.";
+	} else {
+		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
+
 ?>
+</html>
