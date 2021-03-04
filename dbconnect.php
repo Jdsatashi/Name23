@@ -1,4 +1,3 @@
-<html>
 <?php
 $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
 $dbname = "da79i3d6vat4tl";
@@ -49,4 +48,3 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
 
 ?>
-</html>
