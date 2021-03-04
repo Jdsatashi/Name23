@@ -35,16 +35,16 @@ $link = pg_connect("host=ec2-34-201-248-246.compute-1.amazonaws.com dbname=da79i
 	
 	//$mysqlquery = "INSERT INTO Product (id, product_name, category, price, description) VALUES ('$id', '$name', '$cat', '$price', '$desc')";
 
-	$sql = 'INSERT INTO public."Product" ("id", "product_name", "category", "price", "description") VALUES ('."'$id': :character varying,
+	$mysqlquery = 'INSERT INTO public."Product" ("id", "product_name", "category", "price", "description") VALUES ('."'$id': :character varying,
 	'$name': :character varying, '$cat': :character varying, '$price': :integer, '$desc': :character varying)".
 	' returning "id"';
 	
-	echo $sql;
+	echo $mysqlquery;
 	
-	if(pg_query($link, $sql)){
+	if(pg_query($link, $mysqlquery)){
 		echo "Records added successfully.";
 	} else {
-		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	pg_close($link);
 ?>
 </body>
