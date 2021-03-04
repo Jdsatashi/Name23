@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<form method="popst" action="productscipt.php">
+	<form method="popst" action="connectdb.php">
 	Id: <input type="text" name="id" id="id"><br>
 	Product name: <input type="text" name="productname" id="productname"><br>
 	Category: <input type="text" name="category" id="category"><br>
