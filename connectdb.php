@@ -15,29 +15,25 @@ $link = pg_connect("host=ec2-34-201-248-246.compute-1.amazonaws.com dbname=da79i
 	}
 $id = mysql_real_escape_string($link, $_REQUEST['id']);
 
-	$id= $_REQUEST['id'];
-	$name = $_REQUEST['product_name'];
+	$id= $_REQUEST['pid'];
+	$name = $_REQUEST['pname'];
 	$cat = $_REQUEST['category'];
 	$price = $_REQUEST['price'];
-	$desc = $_REQUEST['description'];
 	
 	//$pid = mysqli_real_escape_string($link, $_REQUEST['id']);
 	//$pname = mysqli_real_escape_string($link, $_REQUEST['name']);
 	//$pcat = mysqli_real_escape_string($link, $_REQUEST['cat']);
-	//$pdate = mysqli_real_escape_string($link, $_REQUEST['date']);
 	//$pprice = mysqli_real_escape_string($link, $_REQUEST['price']);
-	//$pdescription = mysqli_real_escape_string($link, $_REQUEST['description']);
 	
 	echo $id;
 	echo $name;
 	echo $cat;
 	echo $price;
-	echo $desc;
 	
-	//$mysqlquery = "INSERT INTO Product (id, product_name, category, price, description) VALUES ('$id', '$name', '$cat', '$price', '$desc')";
+	//$mysqlquery = "INSERT INTO Product (id, product_name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
 
-	$mysqlquery = 'INSERT INTO public."Product" ("id", "product_name", "category", "price", "description") VALUES ('."'$id': :character varying,
-	'$name': :character varying, '$cat': :character varying, '$price': :integer, '$desc': :character varying)".
+	$mysqlquery = 'INSERT INTO public."Product" ("id", "product_name", "category", "price",) VALUES ('."'$id': :character varying,
+	'$name': :character varying, '$cat': :character varying, '$price': :integer)".
 	' returning "id"';
 	
 	echo $mysqlquery;
