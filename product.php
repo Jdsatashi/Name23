@@ -10,13 +10,13 @@
 </head>
 
 <body>
-	<form method="popst" action="dbconnect.php">
+	<form method="popst" action="connectdb.php">
 	Id: <input type="text" name="id" id="id"><br>
 	Product name: <input type="text" name="productname" id="productname"><br>
 	Category: <input type="text" name="category" id="category"><br>
 	Price: <input type="text" name="price" id="price"><br>
 	Description: <input type="text" name="Description" id="Description"><br>
-	<input type="summit">
+	<input type="submit">
 </form>
 
 </body>
