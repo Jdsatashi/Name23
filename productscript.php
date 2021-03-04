@@ -1,3 +1,9 @@
+<html>
+<body>
+<p> You have summitted the following to the server: </p>
+Your name: <?php echo $_POST["name"]; ?><br>
+Your email: <?php echo $_POST["email"]; ?><br>
+
 <?php
 $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
 $dbname = "da79i3d6vat4tl";
@@ -48,3 +54,5 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
 
 ?>
+</body>
+</html>
