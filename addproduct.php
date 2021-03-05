@@ -40,13 +40,13 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $mysql = INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
-    echo $mysql;
+    $mysqli = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    echo $mysqli;
     
-    if(pg_query($link, $mysql)){
+    if(pg_query($link, $mysqli)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $mysql. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysqli. " . pg_error($link);
 	}
 		pg_close($link);
     ?>
