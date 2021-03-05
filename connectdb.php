@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1> You have summitted the following to the server: </h1>
+<h1><a href="product.php"> Back </a> You have summitted the following to the server: </h1>
 <p> Id:     <?php echo $_POST["id"]; ?> <br> </p>
 <p> Name product:     <?php echo $_POST["name"]; ?> <br> </p>
 <p> Price:     <?php echo $_POST["price"]; ?> <br>
@@ -51,6 +51,6 @@
 	// Close connection
 	pg_close($link);
 ?>
-<a href="product.php"> Back </a>
+
 </body>
 </html>
