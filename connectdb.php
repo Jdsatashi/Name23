@@ -1,9 +1,9 @@
 <html>
 <body>
-<p> You have summitted the following to the server: </p>
-    <?php echo $_POST["id"]; ?> <br>
-    <?php echo $_POST["name"]; ?> <br>
-    <?php echo $_POST["price"]; ?> <br>
+<h1> You have summitted the following to the server: </h1>
+<p> Id:     <?php echo $_POST["id"]; ?> <br> </p>
+<p> Name product:     <?php echo $_POST["name"]; ?> <br> </p>
+<p> Price:     <?php echo $_POST["price"]; ?> <br>
 
 <?php
 $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
@@ -26,17 +26,17 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	$cat = $_REQUEST['category'];
 	$price = $_REQUEST['price'];
 	
-	//$id = mysqli_real_escape_string($link, $_REQUEST['id']);
-	//$name = mysqli_real_escape_string($link, $_REQUEST['name']);
-	//$cat = mysqli_real_escape_string($link, $_REQUEST['cat']);
-	//$price = mysqli_real_escape_string($link, $_REQUEST['price']);
+	$id = mysqli_real_escape_string($link, $_REQUEST['id']);
+	$name = mysqli_real_escape_string($link, $_REQUEST['name']);
+	$cat = mysqli_real_escape_string($link, $_REQUEST['cat']);
+	$price = mysqli_real_escape_string($link, $_REQUEST['price']);
 	
 	echo $id;
 	echo $name;
 	echo $cat;
 	echo $price;
 	
-	$mysqlquery = "INSERT INTO Product (id, name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
+	$mysqlquery = "INSERT INTO Product (id, name, category, price) VALUES ('$id', '$name', '$cat', '$price')";
 
 	$mysqlquery = 'INSERT INTO public."Product" ("id", "name", "category", "price",) VALUES ('."'$id': :character varying,
 	'$name': :character varying, '$cat': :character varying, '$price': :integer)".
