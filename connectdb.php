@@ -26,28 +26,28 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	$cat = $_REQUEST['category'];
 	$price = $_REQUEST['price'];
 	
-	$id = mysqli_real_escape_string($link, $_REQUEST['id']);
-	$name = mysqli_real_escape_string($link, $_REQUEST['name']);
-	$cat = mysqli_real_escape_string($link, $_REQUEST['cat']);
-	$price = mysqli_real_escape_string($link, $_REQUEST['price']);
+	//$id = mysqli_real_escape_string($link, $_REQUEST['id']);
+	//$name = mysqli_real_escape_string($link, $_REQUEST['name']);
+	//$cat = mysqli_real_escape_string($link, $_REQUEST['cat']);
+	//$price = mysqli_real_escape_string($link, $_REQUEST['price']);
 	
 	echo $id;
 	echo $name;
 	echo $cat;
 	echo $price;
 	
-	$mysqli_query = "INSERT INTO Product (id, name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
+	$mysqlquery = "INSERT INTO Product (id, name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
 
-	$mysqli_query = 'INSERT INTO public."Product" ("id", "name", "category", "price",) VALUES ('."'$id': :character varying,
+	$mysqlquery = 'INSERT INTO public."Product" ("id", "name", "category", "price",) VALUES ('."'$id': :character varying,
 	'$name': :character varying, '$cat': :character varying, '$price': :integer)".
 	' returning "id"';
 	
-	echo $mysqli_query;
+	echo $mysqlquery;
 	
-	if(pg_query($link, $mysqli_query)){
+	if(pg_query($link, $mysqlquery)){
 		echo "Records added successfully.";
 	} else {
-		echo "ERROR: Could not able to execute $mysqli_query. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	}
 		pg_close($link);
 ?>
