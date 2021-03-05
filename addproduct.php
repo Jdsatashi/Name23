@@ -32,17 +32,17 @@
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
 */
 
-/*
-	$sql4 = 'INSERT INTO public."Product" (
+
+	$sql = 'INSERT INTO public."Product" (
 			pid,pname,pcate,pcost) VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
-*/
-    $mysqlquery = pg_query($link, "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ($id, '$name', '$cate', '$cost');");
+
+    //$mysqlquery = pg_query($link, "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ($id, '$name', '$cate', '$cost');");
     
-	echo $mysqlquery;
+	echo $sql;
 	
-    if($link){
+    if(pg_query($link, $sql)){
 		echo "Records added successfully.";
 	} 
     ?>
