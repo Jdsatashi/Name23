@@ -34,13 +34,18 @@
     echo $name;
     echo $cost;
 
-    $mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
-    echo $mysqlquery;
+	$sql4 = 'INSERT INTO public."Product" (
+			"pid","pname","pcate","pcost") VALUES ('."
+			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
+			 'returning "id"';
+
+    //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    echo $sql4;
     
-    if(pg_query($link, $mysqlquery)){
+    if(pg_query($link, $sql4)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
+		echo "ERROR: Could not able to execute $sql4. " . pg_error($link);
 	}
 		pg_close($link);
     ?>
