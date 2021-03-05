@@ -30,9 +30,9 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	echo $cat;
 	echo $price;
 	
-	//$mysqlquery = "INSERT INTO Product (id, product_name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
+	//$mysqlquery = "INSERT INTO Product (pid, pname, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
 
-	$mysqlquery = 'INSERT INTO public."Product" ("id", "product_name", "category", "price",) VALUES ('."'$id': :character varying,
+	$mysqlquery = 'INSERT INTO public."Product" ("pid", "pname", "category", "price",) VALUES ('."'$id': :character varying,
 	'$name': :character varying, '$cat': :character varying, '$price': :integer)".
 	' returning "id"';
 	
