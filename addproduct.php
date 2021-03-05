@@ -20,23 +20,16 @@
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-/*    $id = $_REQUEST['pid'];
+    $id = $_REQUEST['pid'];
     $name = $_REQUEST['pname'];
 	$cate = $_REQUEST['pcate'];
     $cost = $_REQUEST['pcost'];
-*/
+/*
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
 	$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
-	
-	$id = "001";
-	$name = "My Product";
-	$cat = "Default";
-	$date = "04-24-2020";
-	$price = "100";
-	$desc = "Default";
-	
+*/	
     echo $id;
     echo $name;
     echo $cost;
@@ -49,6 +42,12 @@
     $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     echo $mysqlquery;
     
+    if(pg_query($link, $mysqlquery)){
+		echo "Records added successfully.";
+	} else{
+		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
+	}
+		pg_close($link);
     ?>
 
 </body>
