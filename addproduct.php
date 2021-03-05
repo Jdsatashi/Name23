@@ -42,12 +42,6 @@
     $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     echo $mysqlquery;
     
-    if(pg_query($link, $mysqlquery)){
-		echo "Records added successfully.";
-	} else{
-		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
-	}
-
     ?>
 
 </body>
