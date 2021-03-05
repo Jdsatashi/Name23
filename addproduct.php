@@ -30,6 +30,13 @@
 	$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
 	
+	$id = "001";
+	$name = "My Product";
+	$cat = "Default";
+	$date = "04-24-2020";
+	$price = "100";
+	$desc = "Default";
+	
     echo $id;
     echo $name;
     echo $cost;
@@ -39,8 +46,9 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
-
+    $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    echo $mysqlquery;
+    
     ?>
 
 </body>
