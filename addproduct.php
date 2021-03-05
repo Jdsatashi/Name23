@@ -40,7 +40,7 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $mysql = "INSERT INTO table.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $mysql = INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
     echo $mysql;
     
     if(pg_query($link, $mysql)){
