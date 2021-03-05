@@ -11,8 +11,8 @@
 
 <body>
 	<form method="post" action="connectdb.php">
-	Id: <input type="text" name="id" id="pid"><br>
-	Product name: <input type="text" name="pname" id="pname"><br>
+	Id: <input type="text" name="id" id="id"><br>
+	Product name: <input type="text" name="name" id="name"><br>
 	Category: <input type="text" name="category" id="category"><br>
 	Price: <input type="text" name="price" id="price"><br>
 	<input type="submit">
