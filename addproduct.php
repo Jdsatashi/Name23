@@ -47,9 +47,7 @@
 	
     if($link){
 		echo "Records added successfully.";
-	} else{
-		echo "ERROR: Could not able to execute $mysql. " . pg_error($link);
-	}
+	} 
     ?>
 
 </body>
