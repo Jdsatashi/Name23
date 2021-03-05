@@ -39,15 +39,15 @@
 	<p>
 	</p>
 
-    $mysql = "INSERT INTO public."Product" (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $sql = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     <p>
 	</p>
-	echo $mysqlquery;
+	echo $sql;
     
-    if(pg_query($link, $mysqlquery)){
+    if(pg_query($link, $sql)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
+		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
 	}
     ?>
 
