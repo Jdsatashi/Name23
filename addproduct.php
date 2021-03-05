@@ -20,31 +20,27 @@
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-/*
+
     $id = $_REQUEST['pid'];
     $name = $_REQUEST['pname'];
 	$cate = $_REQUEST['pcate'];
     $cost = $_REQUEST['pcost'];
-*/
+/*
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
 	$cate = mysql_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
-
+*/
 
 /*
 	$sql4 = 'INSERT INTO public."Product" (
 			pid,pname,pcate,pcost) VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
-			 "INSERT INTO 'Product'(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
 */
-    $mysql = pg_query($link, 'INSERT INTO public."Product" (
-			pid,pname,pcate,pcost) VALUES ('."
-			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
-			 'returning "id"';);
+    $mysqlquery = pg_query($link, "INSERT INTO 'Product'(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');");
     
-	echo $mysql;
+	echo $mysqlquery;
 	
     if($link){
 		echo "Records added successfully.";
