@@ -32,7 +32,7 @@
 */	
     echo $id;
     echo $name;
-	echo $cate
+	echo $cate;
     echo $cost;
 /*
 	$sql4 = 'INSERT INTO public."Product" (
