@@ -51,5 +51,6 @@
 	// Close connection
 	pg_close($link);
 ?>
+<a href="product.php"> Back </a>
 </body>
 </html>
