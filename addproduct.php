@@ -1,6 +1,5 @@
 <html>
 <body>
-<p><a  href="insertpro.php"> Back page insert product</a></p>
 <h2>You have summitted the following to the server: </h2>
     <?php echo $_POST["pid"]; ?> <br>
     <?php echo $_POST["pname"]; ?> <br>
@@ -34,7 +33,7 @@
     echo $name;
     echo $cost;
 
-    $mysqlquery = "INSERT INTO public."Product" (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $mysqlquery = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     echo $mysqlquery;
     
     if(pg_query($link, $mysqlquery)){
