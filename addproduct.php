@@ -41,7 +41,6 @@
 	} else{
 		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	}
-		pg_close($link);
     ?>
 
 </body>
