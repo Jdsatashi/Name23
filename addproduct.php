@@ -20,21 +20,18 @@
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-
+/*
     $id = $_REQUEST['pid'];
     $name = $_REQUEST['pname'];
 	$cate = $_REQUEST['pcate'];
     $cost = $_REQUEST['pcost'];
-/*
+*/
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
 	$cate = mysql_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
-*/
-    echo $id;
-    echo $name;
-	echo $cate;
-    echo $cost;
+
+
 /*
 	$sql4 = 'INSERT INTO public."Product" (
 			"pid","pname","pcate","pcost") VALUES ('."
