@@ -6,8 +6,14 @@
     <?php echo $_POST["price"]; ?> <br>
 
 <?php
-$link = pg_connect("host=ec2-34-201-248-246.compute-1.amazonaws.com dbname=da79i3d6vat4tl port=5432 user=tapdzjqevixblx password=adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec sslmode="require");
+$host = "ec2-34-201-248-246.compute-1.amazonaws.com";
+$dbname = "da79i3d6vat4tl";
+$port = "5432";
+$user = "tapdzjqevixblx";
+$pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
+$ssl = "require";
 
+$link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode".ssl);
 	if($link === false){
 		die("ERROR: Could not connect.");
 	} else {
