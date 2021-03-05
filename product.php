@@ -42,7 +42,7 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 18px;
 }
 
 .col-25 {
@@ -65,7 +65,7 @@ input[type=submit]:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
@@ -75,17 +75,40 @@ input[type=submit]:hover {
 </head>
 
 <body>
+<h1> Welcome to page input data product</h1>
+
 	<form method="post" action="connectdb.php">
-	Product name: <input type="text" name="name" id="name"><br>
-	Category: <input type="text" name="category" id="category"><br>
-	Price: <input type="text" name="price" id="price"><br>
 	<input type="hidden" id="controlUpdate" name="controlUpdate" value="<?php echo $isUpdated?>" />
   <div class="row">
     <div class="col-25">
       <label for="name">Product Id</label>
     </div>
     <div class="col-75">
-      <input type="text" id="id" name="id" value="<?php echo $id?>" <?php if ($isUpdated == 1) echo "readonly";?> placeholder="product id..">
+      <input type="text" id="id" name="id" value="<?php echo $id?>" <?php if ($isUpdated == 1) echo "readonly";?> placeholder="product id...">
+    </div>	
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="name">Product Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" value="<?php echo $name?>" <?php if ($isUpdated == 1) echo "readonly";?> placeholder="product name...">
+    </div>	
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="name">Product Category</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="category" name="category" value="<?php echo $category?>" <?php if ($isUpdated == 1) echo "readonly";?> placeholder="product category...">
+    </div>	
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="name">Product Price</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="price" name="price" value="<?php echo $price?>" <?php if ($isUpdated == 1) echo "readonly";?> placeholder="product price...">
     </div>	
   </div>
 	<input type="submit">
