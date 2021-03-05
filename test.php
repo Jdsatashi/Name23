@@ -27,7 +27,7 @@
 	//$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
 	//$cost = mysqli_real_escape_string($link, $_REQUEST['pcost']);
 
-
+/*
 	$id = "003";
 	$name = "Product";
 	$cate = "Default";
@@ -38,8 +38,8 @@
 			"pid","pname","pcate","pcost") VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
-	
-	//$sql = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES			('002','My Product','Default11','10080')";
+*/	
+	$sql = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES			('002','My Product','Default11','10080')";
 	
 	if(pg_query($link, $sql4)){
 		echo "Records added successfully.";
