@@ -33,16 +33,16 @@
 */
 
 
-/*	$mysql = 'INSERT INTO public."Product" (
+$sql = 'INSERT INTO public."Product" (
 			pid,pname,pcate,pcost) VALUES ('."
-			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
+			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::character varying)".
 			 'returning "id"';
-*/
-    $mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+
+    //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     
-	echo $mysqlquery;
+	echo $sql;
 	
-    if(pg_query($link, $mysqlquery)){
+    if(pg_query($link, $sql)){
 		echo "Records added successfully.";
 	} 
     ?>
