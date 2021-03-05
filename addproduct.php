@@ -21,10 +21,10 @@
 		echo "Connection to Heroku Postgres has been established";
 	}
 
-    $id = $_REQUEST['pid'];
-    $name = $_REQUEST['pname'];
-	$cate = $_REQUEST['pcate'];
-    $cost = $_REQUEST['pcost'];
+    $id = $_REQUEST["pid"];
+    $name = $_REQUEST["pname"];
+	$cate = $_REQUEST["pcate"];
+    $cost = $_REQUEST["pcost"];
 /*
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
