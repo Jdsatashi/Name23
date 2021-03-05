@@ -30,19 +30,20 @@ $id = mysql_real_escape_string($link, $_REQUEST['id']);
 	echo $cat;
 	echo $price;
 	
-	$mysqlquery = "INSERT INTO Product (id, name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
+	$mysqli_query = "INSERT INTO Product (id, name, category, price, description) VALUES ('$id', '$name', '$cat', '$price')";
 
-	$mysqlquery = 'INSERT INTO public."Product" ("id", "name", "category", "price",) VALUES ('."'$id': :character varying,
+	$mysqli_query = 'INSERT INTO public."Product" ("id", "name", "category", "price",) VALUES ('."'$id': :character varying,
 	'$name': :character varying, '$cat': :character varying, '$price': :integer)".
 	' returning "id"';
 	
-	echo $mysqlquery;
+	echo $mysqli_query;
 	
-	if(pg_query($link, $mysqlquery)){
+	if(pg_query($link, $mysqli_query)){
 		echo "Records added successfully.";
 	} else {
-		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysqli_query. " . pg_error($link);
 	}
+		pg_close($link);
 ?>
 </body>
 </html>
