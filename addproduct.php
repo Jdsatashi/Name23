@@ -33,10 +33,10 @@
 */
 
 
-	$sql = INSERT INTO public."Product" (
+	$sql = pg_query($link, INSERT INTO public."Product" (
 			pid,pname,pcate,pcost) VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
-			 'returning "id";
+			 'returning "id");
 
     //$mysqlquery = pg_query($link, "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ($id, '$name', '$cate', '$cost');");
     
