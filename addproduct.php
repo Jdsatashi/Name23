@@ -39,7 +39,7 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $sql4 = "INSERT INTO public.'Product'(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $sql4 = 'INSERT INTO public."Product"(pid, pname, pcate, pcost) VALUES ("$id", "$name", "$cate", "$cost")';
     echo $sql4;
     
     if(pg_query($link, $sql4)){
