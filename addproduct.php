@@ -39,7 +39,7 @@
 	<p>
 	</p>
 
-    $mysqlquery = "INSERT INTO Product (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $mysql = "INSERT INTO public."Product" (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     <p>
 	</p>
 	echo $mysqlquery;
