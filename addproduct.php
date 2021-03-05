@@ -38,7 +38,7 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
+    $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     
 	echo $mysql;
 	
