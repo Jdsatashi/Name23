@@ -39,15 +39,15 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $sql = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
-    echo $sql;
+    $mysqlquery = "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    echo $mysqlquery;
     
-    if(pg_query($link, $sql)){
+    if(pg_query($link, $mysqlquery)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	}
-		pg_close($link);
+
     ?>
 
 </body>
