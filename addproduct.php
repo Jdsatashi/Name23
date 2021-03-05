@@ -1,11 +1,12 @@
 <html>
 <body>
+<p><a  href="insertpro.php"> Back page insert product</a></p>
 <h2>You have summitted the following to the server: </h2>
-    <?php echo $_POST["id"]; ?> <br>
-    <?php echo $_POST["name"]; ?> <br>
-    <?php echo $_POST["price"]; ?> <br>
+    <?php echo $_POST["pid"]; ?> <br>
+    <?php echo $_POST["pname"]; ?> <br>
+    <?php echo $_POST["pcost"]; ?> <br>
     <?php
-    $host = "host=ec2-34-201-248-246.compute-1.amazonaws.com";
+    $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
     $port = "5432";
     $user = "tapdzjqevixblx";
@@ -19,21 +20,21 @@
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-    $id = $_REQUEST['id'];
-    $name = $_REQUEST['name'];
-	$cat = $_REQUEST['category'];
-    $price = $_REQUEST['price'];
+    $id = $_REQUEST['pid'];
+    $name = $_REQUEST['pname'];
+	$cate = $_REQUEST['pcate'];
+    $cost = $_REQUEST['pcost'];
     /*
-    $id = mysql_real_escape_string($link, $_REQUEST['id']);
-    $name = mysql_real_escape_string($link, $_REQUEST['name']);
-    $price = mysql_real_escape_string($link, $_REQUEST['price']);
-	$cat = mysqli_real_escape_string($link, $_REQUEST['cat']);
+    $id = mysql_real_escape_string($link, $_REQUEST['pid']);
+    $name = mysql_real_escape_string($link, $_REQUEST['pname']);
+	$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
+    $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
     */
     echo $id;
     echo $name;
-    echo $price;
+    echo $cost;
 
-    $mysqlquery = "INSERT INTO Product (id, name, category, price) VALUES ('$id', '$name', '$cat', '$price')";
+    $mysqlquery = "INSERT INTO public."Product" (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     echo $mysqlquery;
     
     if(pg_query($link, $mysqlquery)){
@@ -43,6 +44,6 @@
 	}
 		pg_close($link);
     ?>
-<p><a  href="product.php"> Back page insert product</a></p>
+
 </body>
 </html>
