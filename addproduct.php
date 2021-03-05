@@ -33,16 +33,16 @@
 */
 
 
-	$sql = pg_query($link, INSERT INTO public."Product" (
+	$mysql = 'INSERT INTO public."Product" (
 			pid,pname,pcate,pcost) VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
-			 'returning "id");
+			 'returning "id"';
 
     //$mysqlquery = pg_query($link, "INSERT INTO public.Product(pid, pname, pcate, pcost) VALUES ($id, '$name', '$cate', '$cost');");
     
-	echo $sql;
+	echo $mysql;
 	
-    if(pg_query($link, $sql)){
+    if(pg_query($link, $mysql)){
 		echo "Records added successfully.";
 	} 
     ?>
