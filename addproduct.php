@@ -38,8 +38,13 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');
-
+    $mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    
+	echo $mysqlquery;
+	
+    if(pg_query($link, $mysqlquery)){
+		echo "Records added successfully.";
+	} 
     ?>
 
 </body>
