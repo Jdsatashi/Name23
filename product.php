@@ -77,7 +77,7 @@ input[type=submit]:hover {
 <body>
 <h1> Welcome to page input data product</h1>
 
-	<form method="post" action="connectdb.php">
+	<form method="post" action="addproduct.php">
 	<input type="hidden" id="controlUpdate" name="controlUpdate" value="<?php echo $isUpdated?>" />
   <div class="row">
     <div class="col-25">
