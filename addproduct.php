@@ -29,26 +29,19 @@
 	$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
     */
-    echo $id; 
-	<p>
-	</p>
+    echo $id;
     echo $name;
-	<p>
-	</p>
     echo $cost;
-	<p>
-	</p>
 
     $mysqlquery = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
-    <p>
-	</p>
-	echo $mysqlquery;
+    echo $mysqlquery;
     
     if(pg_query($link, $mysqlquery)){
 		echo "Records added successfully.";
 	} else{
 		echo "ERROR: Could not able to execute $mysqlquery. " . pg_error($link);
 	}
+		pg_close($link);
     ?>
 
 </body>
