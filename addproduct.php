@@ -27,7 +27,7 @@
 /*
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
-	$cate = mysqli_real_escape_string($link, $_REQUEST['pcate']);
+	$cate = mysql_real_escape_string($link, $_REQUEST['pcate']);
     $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
 */	
     echo $id;
@@ -40,13 +40,13 @@
 			'$id'::character varying,'$name'::character varying,'$cate'::character varying,'$cost'::integer)".
 			 'returning "id"';
 */
-    $mysqli = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
-    echo $mysqli;
+    $mysql = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost');";
+    echo $mysql;
     
-    if(pg_query($link, $mysqli)){
+    if(pg_query($link, $mysql)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $mysqli. " . pg_error($link);
+		echo "ERROR: Could not able to execute $mysql. " . pg_error($link);
 	}
 		pg_close($link);
     ?>
