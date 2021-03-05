@@ -39,15 +39,15 @@
 	<p>
 	</p>
 
-    $sql = "INSERT INTO public.Product (pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
+    $sql4 = 'INSERT INTO public."Product" ("pid", "pname", "pcate", "pcost") VALUES ('".'$id'::character varying, '$name'::character varying, '$cate'::character varying, '$cost'::integer)".'returning "id"';
     <p>
 	</p>
-	echo $sql;
+	echo $sql4;
     
-    if(pg_query($link, $sql)){
+    if(pg_query($link, $sql4)){
 		echo "Records added successfully.";
 	} else{
-		echo "ERROR: Could not able to execute $sql. " . pg_error($link);
+		echo "ERROR: Could not able to execute $sql4. " . pg_error($link);
 	}
     ?>
 
