@@ -36,13 +36,13 @@ input[type=submit]:hover {
 </head>
 
 <body>
-<h1> Welcome to page input data product</h1>
+<h1> Welcome to page input data customer</h1>
 
 	<form method="post" action="addcustomer.php">
 Type Id:		<input type="text" name="cid" id="cid"><br>
 Type Name:		<input type="text" name="cname" id="cname"><br>
-Type category:	<input type="text" name="phonenumber" id="phonenumber"><br>
-Type price:		<input type="text" name="address" id="address"><br>
+Type Phone number:	<input type="text" name="phonenumber" id="phonenumber"><br>
+Type Address:		<input type="text" name="address" id="address"><br>
 	<input type="submit">
 </form>
 
