@@ -34,7 +34,7 @@
 */
 
 
-$sql = 'INSERT INTO "Customer"("cid","cname","phonenumber","address") VALUES ('."
+$sql = 'INSERT INTO "customer"("cid","cname","phonenumber","address") VALUES ('."
 			'$id'::character varying,'$name'::character varying,'$phone'::integer,'$add'::character varying)".
 			 'returning "cid"';
 
