@@ -35,7 +35,7 @@
 
 
 $sql = 'INSERT INTO "Customer"("cid","cname","phonenumber","address") VALUES ('."
-			'$id'::character varying,'$name'::character varying,'$phone'::character varying,'$address'::integer)".
+			'$id'::character varying,'$name'::character varying,'$phone'::integer,'$address'::character varying)".
 			 'returning "cid"';
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
