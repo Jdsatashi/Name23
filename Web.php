@@ -210,17 +210,17 @@ body {
 
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img src="img/lego" style="width:100%">
+    <img src="img/lego.jpg" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
  
   <div class="mySlides fade">
-    <img src="img/rubik" style="width:100%">
+    <img src="img/rubik.jpg" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
  
   <div class="mySlides fade">
-    <img src="img/chess1" style="width:100%">
+    <img src="img/chess1.jpg" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
 </div>
@@ -266,21 +266,20 @@ body {
     $pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
     $ssl = "require";
 
-    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
+    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl) or die ("Could not connect to server\n");
 
+	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"'
 	
-    $prod = pg_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2');
+    $prod = pg_query($link, $query)or die("Cannot execute query: $query\n");
 	?>
 	<?php   
-while ($row = pg_fetch_row($prod)) { 
-?>
-      <img src="<?php echo $row['pimg'];?>">
+while ($row = pg_fetch_row($prod)) { ?>
 
+<img src="<?php echo $row['pimg'];?>">
 <h3><?php echo $row['pname'];?></h3>
 <h6>Super toys <?php echo $row['pname'];?> was made in Vietnam or some where.</h6>
 <h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
 
-  
 <?php } ?>
 	
 
