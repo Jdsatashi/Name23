@@ -257,7 +257,7 @@ body {
     showSlides(slideIndex = n);
   }
 </script>
-<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
+
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
@@ -266,19 +266,27 @@ body {
     $pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
     $ssl = "require";
 
-    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl) or die ("Could not connect to server\n");
+    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"';
+	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"'
 	
-    $prod = pg_query($link, $query)or die("Cannot execute query: $query\n");
+    $prod = pg_query($link, $query);
 	?>
 	<?php   
-while ($row = pg_fetch_row($prod)) {
-  echo "$row[0] $row[1]";
-}
+while ($row = pg_fetch_row($prod)) { ?>
 
-pg_close($link); 
-?>
+<img src="<?php echo $row['pimg'];?>">
+<h3><?php echo $row['pname'];?></h3>
+<h6>Super toys <?php echo $row['pname'];?> was made in Vietnam or some where.</h6>
+<h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
+
+<?php
+pg_close($con); 
+} ?>
+	
+
+<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
+
   </div>
 <footer>
 	<div class="container-fluid" id="copyright">
