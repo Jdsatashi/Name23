@@ -267,21 +267,17 @@ body {
     $ssl = "require";
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
-    $product = mysqli_query($link, 'SELECT pimg, pid, pname, pcost FROM "product" ORDER BY "pid" LIMIT 3')
+    $product = mysqli_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
 	?>
 	<?php   
 while ($row = mysqli_fetch_array($product)) { 
 ?>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
       <img src="<?php echo $row['pimg'];?>">
-      <div class="caption">
+
         <h3>Figure <?php echo $row['pname'];?></h3>
         <h6>Figure <?php echo $row['pname'];?> cực chất lượng được sản xuất tại Nhật Bản.</h6>
         <h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Chi tiết</button></a></h6>
-      </div>
-    </div>		
-  </div>
+
   
 <?php } ?>
 	
