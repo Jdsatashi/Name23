@@ -257,7 +257,7 @@ body {
     showSlides(slideIndex = n);
   }
 </script>
-
+<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
@@ -273,17 +273,11 @@ body {
     $prod = pg_query($link, $query)or die("Cannot execute query: $query\n");
 	?>
 	<?php   
-while ($row = pg_fetch_row($prod)) { ?>
-
-<img src="<?php echo $row['pimg'];?>">
-<h3><?php echo $row['pname'];?></h3>
-<h6>Super toys <?php echo $row['pname'];?> was made in Vietnam or some where.</h6>
-<h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
-
-<?php } ?>
-	
-
-<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
+while ($row = pg_fetch_row($prod)) {
+  echo "$row[0] $row[1] $row[2]\n";
+}
+?>
+pg_close($con); 
 
   </div>
 <footer>
