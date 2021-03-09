@@ -269,7 +269,7 @@ body {
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
 	
-    $prod = mysqli_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
+    $prod = pg_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
 	?>
 	<?php   
 while ($row = pg_fetch_row($prod)) { 
