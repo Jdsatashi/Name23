@@ -274,7 +274,7 @@ body {
 	?>
 	<?php   
 while ($row = pg_fetch_row($prod)) {?>
-<h3>yeah  <?php echo "$row[0] $row[1] $row[2]\n";?></h3>
+<h3>yeah  <?php echo "$row[pid] $row[pname] ";?></h3>
 <?php }
 
 pg_close($con); ?>
