@@ -275,10 +275,17 @@ body {
 	<?php   
 while ($row = pg_fetch_row($prod)) { ?>
 
-<img src="<?php echo $row[1];?>">
-<h3><?php echo $row[2];?></h3>
-<h6>Super toys <?php echo $row['2'];?> was made in Vietnam or some where.</h6>
-<h6><a href="detail.php?pid=<?php echo $row['1']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<?php echo $row[1];?>">
+      <div class="caption">
+        <h3><?php echo $row[2];?></h3>
+		<h6>Super toys <?php echo $row['2'];?> was made in Vietnam or some where.</h6>
+		<h6><a href="detail.php?pid=<?php echo $row['1']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
+      </div>
+    </div>		
+  </div>
+
 
 <?php
 pg_close($link); 
