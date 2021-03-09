@@ -210,17 +210,17 @@ body {
 
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img src="#" style="width:100%">
+    <img src="img/lego" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
  
   <div class="mySlides fade">
-    <img src="#" style="width:100%">
+    <img src="img/rubik" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
  
   <div class="mySlides fade">
-    <img src="#" style="width:100%">
+    <img src="img/chess1" style="width:100%">
     <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
   </div>
 </div>
@@ -269,22 +269,22 @@ body {
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
 	
-    $prod = pg_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
+    $prod = pg_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2');
 	?>
 	<?php   
 while ($row = pg_fetch_row($prod)) { 
 ?>
       <img src="<?php echo $row['pimg'];?>">
 
-        <h3>Figure <?php echo $row['pname'];?></h3>
-        <h6>Figure <?php echo $row['pname'];?> cực chất lượng được sản xuất tại Nhật Bản.</h6>
-        <h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Chi tiết</button></a></h6>
+<h3><?php echo $row['pname'];?></h3>
+<h6>Super toys <?php echo $row['pname'];?> was made in Vietnam or some where.</h6>
+<h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
 
   
 <?php } ?>
 	
 
-<h3 class="bg-primary">Bạn đang ý định sở hữu Figure nào? Hãy tham khảo những sản phẩm của chúng tôi.</h3>
+<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
 
   </div>
 <footer>
