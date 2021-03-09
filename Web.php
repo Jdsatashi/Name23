@@ -267,17 +267,12 @@ body {
     $ssl = "require";
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
+
 	
-    if($link === false){
-		die("ERROR: Could not connect.");
-	} else {
-		echo "Connection to Heroku Postgres has been established";
-	}
-	
-    $product = mysqli_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
+    $prod = mysqli_query($link, 'SELECT "pimg", "pid", "pname", "pcost" FROM "product" ORDER BY "pid" LIMIT 2')
 	?>
 	<?php   
-while ($row = mysqli_fetch_array($product)) { 
+while ($row = pg_fetch_row($prod)) { 
 ?>
       <img src="<?php echo $row['pimg'];?>">
 
