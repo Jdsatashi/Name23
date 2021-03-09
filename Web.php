@@ -273,16 +273,11 @@ body {
     $prod = pg_query($link, $query);
 	?>
 	<?php   
-while ($row = pg_fetch_row($prod)) { ?>
+while ($row = pg_fetch_row($prod)) {?>
+<h3>yeah  <?php echo "$row[0] $row[1] $row[2]\n";?></h3>
+<?php }
 
-<img src="<?php echo $row['pimg'];?>">
-<h3><?php echo $row['pname'];?></h3>
-<h6>Super toys <?php echo $row['pname'];?> was made in Vietnam or some where.</h6>
-<h6><a href="detail.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
-
-<?php
-pg_close($link); 
-} ?>
+pg_close($con); ?>
 	
 
 <h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
