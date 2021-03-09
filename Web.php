@@ -268,7 +268,7 @@ body {
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl) or die ("Could not connect to server\n");
 
-	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"'
+	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"';
 	
     $prod = pg_query($link, $query)or die("Cannot execute query: $query\n");
 	?>
