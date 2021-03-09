@@ -267,7 +267,7 @@ body {
     $ssl = "require";
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
-    $product = mysqli_query($link, "SELECT pimg, pid, pname, pcost FROM `product` ORDER BY `pid` LIMIT 3")
+    $product = mysqli_query($link, 'SELECT pimg, pid, pname, pcost FROM "product" ORDER BY "pid" LIMIT 3')
 	?>
 	<?php   
 while ($row = mysqli_fetch_array($product)) { 
