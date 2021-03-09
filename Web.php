@@ -274,11 +274,11 @@ body {
 	?>
 	<?php   
 while ($row = pg_fetch_row($prod)) {
-  echo "$row[0] $row[1] $row[2]\n";
+  echo "$row[0] $row[1]";
 }
-?>
-pg_close($con); 
 
+pg_close($link); 
+?>
   </div>
 <footer>
 	<div class="container-fluid" id="copyright">
