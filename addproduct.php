@@ -25,7 +25,7 @@
     $name = $_REQUEST["pname"];
 	$cate = $_REQUEST["pcate"];
     $cost = $_REQUEST["pcost"];
-	$img = $-REQUEST[img/"pimg"];
+	$img = $-REQUEST["pimg"];
 /*
     $id = mysql_real_escape_string($link, $_REQUEST['pid']);
     $name = mysql_real_escape_string($link, $_REQUEST['pname']);
