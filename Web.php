@@ -132,7 +132,7 @@ h2 {
 }
 
 .dropdown-content a:hover {
-  background-color: #D9D9D9;
+  background-color: #FFFFFF;
   color: white;
 }
 
@@ -141,7 +141,7 @@ h2 {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #D9D9D9;
+  background-color: #FFFFFF;
 }
 </style>
 </head>
