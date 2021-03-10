@@ -152,7 +152,7 @@ h2 {
 <div class="boder">
 
 <div class="header">
-  <h1 class="tim" 65px>Website Trading Figure Japan</h1>
+  <h1 class="tim" 65px>Website Selling Toys Vietnam</h1>
   <h2 class="tim" 40px>JDsatashi</h2>
 </div>
 
@@ -258,6 +258,7 @@ body {
     showSlides(slideIndex = n);
   }
 </script>
+
 <h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
@@ -269,7 +270,7 @@ body {
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"';
+	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid" limit 8';
 	
     $prod = pg_query($link, $query);
 	?>
