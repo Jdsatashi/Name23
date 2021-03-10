@@ -244,7 +244,7 @@ while ($row = pg_fetch_assoc($result)) {
         <h6>Toys <?php echo $row['pname'];?> is the best quality was made in Vietnam.</h6>
 		<h6><?php echo $row['pdetail'];?></h6>
 		<h6>Price: <?php echo $row['pcost'];?> ¥ (yen)</h6>
-		        <h6><a href="#"><button type="button" class="btn btn-info">Buy now</button></a></h6>
+		        <h6><a href="insertinv.php?pid=<?php echo $row['pid']?>"><button type="button" class="btn btn-info">Buy now</button></a></h6>
       </div>
     </div>		
   </div>
