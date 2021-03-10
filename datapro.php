@@ -229,8 +229,8 @@ $result = pg_query($link, $sql);
 ?>
 </div>
 
-<?php while ($row = pg_fetch_assoc($rs)) {
-    echo $row['pid'] . " " . $row['pname'] . " " . $row['pcost'];
+<?php while ($row = pg_fetch_assoc($result)) {
+    echo $row[2] . " " . $row[1] . " " . $row[4];
 }
 ?>
 
