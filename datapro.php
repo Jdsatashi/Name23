@@ -207,25 +207,6 @@ body {
   </div>
 </nav>
 
-<h3 class="bg-primary">JDsatashi Figure Shop have the best figures of Vietnam.</h3>
-
-<div class="slideshow-container">
-  <div class="mySlides fade">
-    <img src="img/lego.jpg" style="width:100%">
-    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
-  </div>
- 
-  <div class="mySlides fade">
-    <img src="img/rubik.jpg" style="width:100%">
-    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be kick your leg!</div>
-  </div>
- 
-  <div class="mySlides fade">
-    <img src="img/chess1.jpg" style="width:100%">
-    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be eat your dream!</div>
-  </div>
-</div>
-<br>
  
 <?php
 ini_set('display_errors', 0);
