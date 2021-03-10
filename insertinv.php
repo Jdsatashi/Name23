@@ -64,7 +64,7 @@ while ($row = pg_fetch_assoc($result)) {
 
 	<form method="post" action="addinvoice.php">
 Type Id customer:	<input type="text" name="cid" id="cid"><br>
-Id product: <input type="text" name="pid" id="pid" value="<?php echo $row['pid'];?>"><br>
+Id product: <input type="text" name="pid" id="pid" value="<?php echo $row['pid'];?>" "readonly"><br>
 Date: <input type="date" name="datebuy" id="datebuy"><br>
 	<input type="submit">
 
