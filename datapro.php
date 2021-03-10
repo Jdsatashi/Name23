@@ -222,7 +222,7 @@ error_reporting(E_ERROR);
 	
 if ($_GET['pid']>0){
 	
-    $sql = 'SELECT pid, pimg, pname, pcost FROM "product" where proid=' .$_GET['proid'];
+    $sql = 'SELECT pid, pimg, pname, pcost FROM "product" where pid=' .$_GET['pid'];
 } else{
     $sql = 'select * from "product"';
 }
