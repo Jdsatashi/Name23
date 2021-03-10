@@ -273,6 +273,7 @@ body {
 	
     $prod = pg_query($link, $query);
 	?>
+<div class="row">	
 	<?php   
 while ($row = pg_fetch_row($prod)) { ?>
 
@@ -287,15 +288,19 @@ while ($row = pg_fetch_row($prod)) { ?>
     </div>		
   </div>
 
-
 <?php
 pg_close($link); 
 } ?>
+</div>	
 	
 <footer>
+	<div class="container-fluid" id="copyright">
+		<div class="row">
 			<div class="booter">
-				<p>Copyright @ 2020 Designed by <a href="https://www.facebook.com/Jd.Trinh.Tathan">Vĩnh Duy Trụ - JD Trịnh Tathan</a> | <a href="Web.php">Powered by Super Toys Vietnam</a>	</p>
+			<p>Copyright @ 2020 Designed by <a href="https://www.facebook.com/Jd.Trinh.Tathan">Vĩnh Duy Trụ - JD Trịnh Tathan</a> | <a href="Web.php">Powered by Super Toys Vietnam</a>	</p>
 			</div>
+		</div>
+	</div>
 </footer>
 </body>
 </html>
