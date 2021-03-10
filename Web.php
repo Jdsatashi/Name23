@@ -257,7 +257,7 @@ body {
     showSlides(slideIndex = n);
   }
 </script>
-
+<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
@@ -281,7 +281,7 @@ while ($row = pg_fetch_row($prod)) { ?>
       <div class="caption">
         <h3><?php echo $row[2];?></h3>
 		<h6>Super toys <?php echo $row['2'];?> was made in Vietnam or some where.</h6>
-		<h6><a href="detail.php?pid=<?php echo $row[1]?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
+		<h6><a href="detail.php?pid=<?php echo $row[0]?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
       </div>
     </div>		
   </div>
@@ -292,7 +292,7 @@ pg_close($link);
 } ?>
 	
 
-<h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
+
 
   </div>
 <footer>
