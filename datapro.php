@@ -222,7 +222,7 @@ error_reporting(E_ERROR);
 	
 if ($_GET['pid']>0){
 	
-    $sql = "select pimg, pid, pname, pcate, pcost from product where pid=" .$_GET['pid'];
+    $sql = "select * from product where pid=" .$_GET['pid'];
 }
 
 $result = pg_query($link, $sql);
