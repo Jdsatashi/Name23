@@ -284,7 +284,7 @@ while ($row = pg_fetch_row($prod)) { ?>
       <div class="caption">
         <h3><?php echo $row[2];?></h3>
 		<h6>Super toys <?php echo $row['2'];?> was made in Vietnam or some where.</h6>
-		<h6><a href="detail.php?pid=<?php echo $row[0]?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
+		<h6><a href="datapro.php?pid=<?php echo $row[0]?>"><button type="button" class="btn btn-info">Buy</button></a></h6>
       </div>
     </div>		
   </div>
