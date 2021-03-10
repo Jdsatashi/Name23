@@ -223,7 +223,7 @@ error_reporting(E_ERROR);
 	
 if ($_GET['pid']>0){
 	
-    $sql = 'SELECT pid, pimg, pname, pcost FROM "product" where pid=' .$_GET['pid'];
+    $sql = 'SELECT pid, pimg, pname, pdetail, pcost FROM "product" where pid=' .$_GET['pid'];
 } else{
     $sql = 'select * from "product"';
 }
@@ -242,7 +242,7 @@ while ($row = pg_fetch_assoc($result)) {
       <div class="caption">
         <h3><?php echo $row['pname'];?></h3>
         <h6>Toys <?php echo $row['pname'];?> is the best quality was made in Vietnam.</h6>
-		<h6><?php echo $row['pcate'];?></h6>
+		<h6><?php echo $row['pdetail'];?></h6>
 		<h6>Price: <?php echo $row['pcost'];?> ¥ (yen)</h6>
 		        <h6><a href="#"><button type="button" class="btn btn-info">Buy now</button></a></h6>
       </div>
