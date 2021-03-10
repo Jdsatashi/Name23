@@ -220,7 +220,7 @@ error_reporting(E_ERROR);
     $ssl = "require";
 	$link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 	
-if ($_GET['pid']>0){
+if ($_GET['pid']!=0){
 	
     $sql = 'select pimg, pid, pname, pcate, pcost from "product" where "pid"=' .$_GET['pid'];
 } else{
