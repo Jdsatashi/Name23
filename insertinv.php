@@ -37,12 +37,37 @@ input[type=submit]:hover {
 
 <body>
 <h1> Welcome to page input data product</h1>
+    <?php
+    $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
+    $dbname = "da79i3d6vat4tl";
+    $port = "5432";
+    $user = "tapdzjqevixblx";
+    $pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
+    $ssl = "require";
 
+    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
+
+	
+    $result = pg_query($link, $query);
+	
+if ($_GET['pid']>0){
+	
+    $sql = 'SELECT product.pid, product.pname, product.pcost FROM where pid=' .$_GET['pid'];
+} else{
+    $sql = 'select * from "product"';
+}
+
+$result = pg_query($link, $sql);
+?>
+<?php   
+while ($row = pg_fetch_assoc($result)) { 
+?>
 	<form method="post" action="addinvoice.php">
-Type Id product:		<input type="text" name="pid" id="pid"><br>
 Type Id customer:	<input type="text" name="cid" id="cid"><br>
-Type number of product:		<input type="text" name="numb" id="numb"><br>
+Id product: <input type="text" name="pid" id="pid" value="<?php echo ['pid']?>" <?php echo "readonly";?>><br>
+Date: <input type="date" name="datebuy" id="datebuy"><br>
 	<input type="submit">
+<?php } ?>	
 </form>
 
 </body>
