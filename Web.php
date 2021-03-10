@@ -6,11 +6,12 @@
 		<title>
 			Figure Shop JDsatashi
 		</title>
-<link rel="stylesheet" href="bootstrap/bootstrap.min.css" crossorigin="anonymous">
+		</title>
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 
-<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css"crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
 
-<script src="bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +35,7 @@ color: purple;
   font-size: 20px;
 }
 .booter {
-  padding: 2px;
+  padding: 1px;
   text-align: center;
   background-color: #88FF84;
   color: #FF0000;
