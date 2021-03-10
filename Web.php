@@ -51,7 +51,7 @@ h2 {
 }
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 800px;
   position: relative;
   margin: auto;
 }
@@ -102,7 +102,7 @@ h2 {
   to {opacity: 1}
 }
 .dropbtn {
-  background-color: #D9D9D9;
+  background-color: #FFFFFF;
   color: white;
   padding: 16px;
   border: none;
@@ -118,7 +118,7 @@ h2 {
   display: none;
   position: absolute;
   right: 0;
-  background-color: #D9D9D9;
+  background-color: #FFFFFF;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -132,7 +132,7 @@ h2 {
 }
 
 .dropdown-content a:hover {
-  background-color: #FFFFFF;
+  background-color: #D9D9D9;
   color: white;
 }
 
@@ -141,7 +141,7 @@ h2 {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #FFFFFF;
+  background-color: #D9D9D9;
 }
 </style>
 </head>
@@ -291,10 +291,6 @@ while ($row = pg_fetch_row($prod)) { ?>
 pg_close($link); 
 } ?>
 	
-
-
-
-  </div>
 <footer>
 	<div class="container-fluid" id="copyright">
 		<div class="row">
