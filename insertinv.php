@@ -51,7 +51,7 @@ error_reporting(E_ERROR);
 	
 if ($_GET['pid']>0){
 	
-    $sql = 'SELECT pid, pname FROM "product" where pid=' .$_GET['pid'];
+    $sql = 'SELECT pid, pcost FROM "product" where pid=' .$_GET['pid'];
 } else{
     $sql = 'select * from "product"';
 }
@@ -65,6 +65,7 @@ while ($row = pg_fetch_assoc($result)) {
 	<form method="post" action="addinvoice.php">
 Type Id customer:	<input type="text" name="cid" id="cid"><br>
 Id product: <input type="text" name="pid" id="pid" value="<?php echo $row['pid'];?>" <?php if ($row['pid'] > 0) echo "readonly";?>><br>
+Total cost: <input type="text" name="price" id="price" value="<?php echo $row['pcost'];?>" <?php if ($row['pcost'] > 0) echo "readonly";?>><br>
 Date: <input type="date" name="datebuy" id="datebuy"><br>
 	<input type="submit">
 
