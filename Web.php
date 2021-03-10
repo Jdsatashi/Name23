@@ -34,7 +34,7 @@ color: purple;
   font-size: 20px;
 }
 .booter {
-  padding: 1px;
+  padding: 2px;
   text-align: center;
   background-color: #88FF84;
   color: #FF0000;
@@ -292,13 +292,9 @@ pg_close($link);
 } ?>
 	
 <footer>
-	<div class="container-fluid" id="copyright">
-		<div class="row">
 			<div class="booter">
-				<p>Copyright @ 2020 Designed by <a href="https://www.facebook.com/Jd.Trinh.Tathan">Vĩnh Duy Trụ</a> | <a href="Web.php">Powered by Japan Figure</a>	</p>
+				<p>Copyright @ 2020 Designed by <a href="https://www.facebook.com/Jd.Trinh.Tathan">Vĩnh Duy Trụ - JD Trịnh Tathan</a> | <a href="Web.php">Powered by Super Toys Vietnam</a>	</p>
 			</div>
-		</div>
-	</div>
 </footer>
 </body>
 </html>
