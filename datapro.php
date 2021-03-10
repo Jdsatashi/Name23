@@ -222,15 +222,17 @@ error_reporting(E_ERROR);
 	
 if ($_GET['pid']>0){
 	
-    $sql = "select * from product where pid=" .$_GET['pid'];
+    $sql = 'select pimg, pid, pname, pcate, pcost from "product" where "pid"=' .$_GET['pid'];
+} else{
+    $sql = 'select * from "product"';
 }
 
 $result = pg_query($link, $sql);
 ?>
 </div>
 
-<?php while ($row = pg_fetch_assoc($result)) {
-    echo $row[2] . " " . $row[1] . " " . $row[4];
+<?php while ($row = pg_fetch_assoc($rs)) {
+    echo $row['id'] . " " . $row['name'] . " " . $row['pcost'];
 }
 ?>
 
