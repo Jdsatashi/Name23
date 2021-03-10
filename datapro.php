@@ -207,6 +207,7 @@ body {
   </div>
 </nav>
 
+ </div>
  
 <?php
 ini_set('display_errors', 0);
@@ -229,12 +230,26 @@ if ($_GET['pid']>0){
 
 $result = pg_query($link, $sql);
 ?>
-</div>
 
-<?php while ($row = pg_fetch_assoc($result)) {
-    echo $row['pid'] . " " . $row['pname'] . " " . $row['pcost'];
-}
+
+<div class="row">
+<?php   
+while ($row = pg_fetch_assoc($result)) { 
 ?>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <img src="<?php echo $row['pimg'];?>">
+      <div class="caption">
+        <h3><?php echo $row['pname'];?></h3>
+        <h6>Toys <?php echo $row['pname'];?> is the best quality was made in Vietnam.</h6>
+		<h6><?php echo $row['pcate'];?></h6>
+		<h6>Price: <?php echo $row['pcost'];?> ¥ (yen)</h6>
+		        <h6><a href="#"><button type="button" class="btn btn-info">Buy now</button></a></h6>
+      </div>
+    </div>		
+  </div>
+<?php } ?>
+</div>
 
 <footer>
 	<div class="container-fluid" id="copyright">
