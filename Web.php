@@ -212,17 +212,17 @@ body {
 <div class="slideshow-container">
   <div class="mySlides fade">
     <img src="img/lego.jpg" style="width:100%">
-    <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
+    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
   </div>
  
   <div class="mySlides fade">
     <img src="img/rubik.jpg" style="width:100%">
-    <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
+    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
   </div>
  
   <div class="mySlides fade">
     <img src="img/chess1.jpg" style="width:100%">
-    <div class="text">Otaku JD Satashi is Master of this web and this shop, the product is the best of the world, it could be Mlem!</div>
+    <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
   </div>
 </div>
 <br>
