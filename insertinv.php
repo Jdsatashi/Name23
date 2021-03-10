@@ -48,8 +48,6 @@ input[type=submit]:hover {
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
 	
-    $result = pg_query($link, $query);
-	
 if ($_GET['pid']>0){
 	
     $sql = 'SELECT product.pid, product.pname, product.pcost FROM where pid=' .$_GET['pid'];
