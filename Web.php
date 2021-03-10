@@ -119,7 +119,7 @@ h2 {
   display: none;
   position: absolute;
   right: 0;
-  background-color: #FFFFFF;
+  background-color: #EDEDEE;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -270,7 +270,7 @@ body {
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid" limit 8';
+	$query = 'SELECT pid, pimg, pname, pcost FROM "product" ORDER BY "pid"';
 	
     $prod = pg_query($link, $query);
 	?>
@@ -289,9 +289,8 @@ while ($row = pg_fetch_row($prod)) { ?>
     </div>		
   </div>
 
-<?php
-pg_close($link); 
-} ?>
+
+<?php } ?>
 </div>	
 	
 <footer>
