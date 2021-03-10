@@ -103,7 +103,7 @@ h2 {
   to {opacity: 1}
 }
 .dropbtn {
-  background-color: #FFFFFF;
+  background-color: #EDEDEE;
   color: white;
   padding: 16px;
   border: none;
@@ -133,7 +133,7 @@ h2 {
 }
 
 .dropdown-content a:hover {
-  background-color: #D9D9D9;
+  background-color: #FF0000;
   color: white;
 }
 
