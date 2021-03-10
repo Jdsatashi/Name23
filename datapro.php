@@ -223,33 +223,17 @@ error_reporting(E_ERROR);
 if ($_GET['pid']>0){
 	
     $sql = "select pimg, pid, pname, pcate, pcost from product where pid=" .$_GET['pid'];
-}else{
-    $sql = "select * from product";
 }
 
 $result = pg_query($link, $sql);
 ?>
 </div>
 
-<div class="row">
-<?php   
-while ($row = pg_fetch_assoc($result)) { 
+<?php while ($row = pg_fetch_assoc($rs)) {
+    echo $row['pid'] . " " . $row['pname'] . " " . $row['pcost'];
+}
 ?>
-  <div class="col-md-6">
-    <div class="thumbnail">
-      <img src="<?php echo $row[0];?>">
-      <div class="caption">
-        <h3><?php echo $row[2];?></h3>
-        <h6>Toys <?php echo $row[2];?> is the best quality was made in Vietnam.</h6>
-		<h6><?php echo $row[3];?></h6>
-		<h6>Price: <?php echo $row[4];?> ¥ (yen)</h6>
-		        <h6><a href="#"><button type="button" class="btn btn-info">Buy now</button></a></h6>
-      </div>
-    </div>		
-  </div>
-<?php } ?>
-  </div>
-	
+
 <footer>
 	<div class="container-fluid" id="copyright">
 		<div class="row">
