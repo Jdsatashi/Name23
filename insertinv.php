@@ -37,20 +37,21 @@ input[type=submit]:hover {
 
 <body>
 <h1> Welcome to page input data product</h1>
-    <?php
+<?php
+ini_set('display_errors', 0);
+error_reporting(E_ERROR); 
+
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
     $port = "5432";
     $user = "tapdzjqevixblx";
     $pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
     $ssl = "require";
-
-    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
-
+	$link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 	
 if ($_GET['pid']>0){
 	
-    $sql = 'SELECT product.pid, product.pname, product.pcost FROM where pid=' .$_GET['pid'];
+    $sql = 'SELECT pid, pimg, pname, pdetail, pcost FROM "product" where pid=' .$_GET['pid'];
 } else{
     $sql = 'select * from "product"';
 }
