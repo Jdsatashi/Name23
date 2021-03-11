@@ -68,7 +68,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 <th>Date buy</th>
 </tr>
 <tr>
-<td><?phpwhile ($row = pg_fetch_assoc($prod)) { $row['invid'] };?></td>
+<td><?php while ($row = pg_fetch_assoc($prod)) { $row['invid']; }?></td>
 <td><?php echo $pid ?></td>
 <td><?php echo $cid ?></td>
 <td><?php echo $price ?></td>
