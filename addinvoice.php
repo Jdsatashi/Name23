@@ -42,7 +42,6 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
     if(pg_query($link, $sql)){
 		echo "Records added successfully.";
 	} 
-	pg_close($link);
     ?>
 <table style=“width:100%”>
 <tr>
