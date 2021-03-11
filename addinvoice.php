@@ -42,7 +42,7 @@ th, td {
 
 
 $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
-			'$cid'::integer,'$pid'::integer,'$price'::integer,'$date'::date)".
+			$pid'::integer,'$cid'::integer, '$price'::integer,'$date'::date)".
 			 'returning "invid"';
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
@@ -52,17 +52,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
     if(pg_query($link, $sql)){
 		echo "Records added successfully.";
 	} 
-    ?>
-	<?php 
-	$host = "ec2-34-201-248-246.compute-1.amazonaws.com";
-    $dbname = "da79i3d6vat4tl";
-    $port = "5432";
-    $user = "tapdzjqevixblx";
-    $pass = "adbd7cd24cae262eaf82c03725969b97984d969afbd7cac9637f9008bcc4f8ec";
-    $ssl = "require";
-
-    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
-    
+  
 	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY RANDOM() LIMIT 5';
 	
     $prod = pg_query($link, $query);
