@@ -63,7 +63,7 @@ while ($row = pg_fetch_assoc($result)) {
 ?>
 
 	<form method="post" action="addinvoice.php">
-<input type="text" name="invid" id="invid" value="DEFAULT" <?php echo "readonly";?>><br>	
+
 Type Id customer:	<input type="text" name="cid" id="cid"><br>
 Id product: <input type="text" name="pid" id="pid" value="<?php echo $row['pid'];?>" <?php if ($row['pid'] > 0) echo "readonly";?>><br>
 Total cost: <input type="text" name="price" id="price" value="<?php echo $row['pcost'];?>" <?php if ($row['pcost'] > 0) echo "readonly";?>><br>
