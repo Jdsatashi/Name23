@@ -41,7 +41,7 @@ input[type=submit]:hover {
 	<form method="post" action="addproduct.php">
 Type id:		<input type="text" name="pid" id="pid"><br>
 Type name:		<input type="text" name="pname" id="pname"><br>
-Type category:	<input type="text" name="pdetail" id="pdetail"><br>
+Type detail of product:	<input type="text" name="pdetail" id="pdetail"><br>
 Type price:		<input type="text" name="pcost" id="pcost"><br>
 Type name image of product: <input type="text" name="pimg" id="pimg"><br>
 	<input type="submit">
