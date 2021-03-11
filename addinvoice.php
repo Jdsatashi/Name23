@@ -11,7 +11,7 @@ th, td {
 </style>
 </head>
 <body>
-<p><a href="insertpro.php">Back</a></p>
+<p><a href="insertinv.php">Back</a></p>
 <h2>You have summitted the following to the server: </h2>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
@@ -53,7 +53,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 		echo "Records added successfully.";
 	} 
   
-	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY RANDOM() LIMIT 5';
+	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY invid';
 	
     $prod = pg_query($link, $query);
 	?>
