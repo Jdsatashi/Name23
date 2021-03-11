@@ -22,43 +22,8 @@
 		
 	</ul>
 
-	<a id="btnAddParrot" href="" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-plus">Add a Parrot</a>
-	<button id="btnAddDog">Add a Dog</button>
-
- <script>
- 	//$: JQuery
-	//$("Selector"): phep chon
-	//$("Selector")."function"
-
- 	$(document).ready(function(){
-		//alert("Document is ready");
-		$("#btnAddParrot").click(function(){ 
-			
-			//$("#btnAddParrot") equivalent to document.getElementById("btnAddParrot")
-			//.click: equivalent to addEventListener
-
-			//alert("Add Parrot is clicked");
-
-			$("#mypetlist").append('<li><a href="#">A Parrot<button class="view" class="ui-btn ui-btn-inline">View Detail</button></a></li>');
-			$("#mypetlist").listview("refresh");
-
-			$(".view").click(function(){
-				//addEventListener trong luc runtime
-				alert("View Detail is clicked");
-			});
-			
-		});
-
-		$("#btnAddDog").click(function(){
-			//alert("Add Parrot is clicked");
-			$("#mypetlist").append('<li><a href="#">A Dog</a></li>');
-			$("#mypetlist").listview("refresh");
-		});
-
-		
-	});
- 	
- </script>
+	<a href="admin.php">Admin page</a>
+	<a href="Web.php">Web home page</a>
 
  </body>
 </html>
