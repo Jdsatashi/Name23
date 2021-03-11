@@ -1,20 +1,8 @@
 <html>
-<head>
-<style>
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 30px;
-}
-</style>
-</head>
+
 <body>
 <p><a href="insertpro.php">Back</a></p>
-
-<h1>Payment successfully. Here are your bill </h1>
-
+<h2>You have summitted the following to the server: </h2>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
@@ -49,19 +37,29 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     
-$query = 'SELECT pname,pcost, cname, phonenumber, invid from "product","customer", "invoice" where product.pid = invoice.pid';
-
-    $prod = pg_query($link, $query);
-	?>
-
-
-
-
+	echo $sql;
+	
     if(pg_query($link, $sql)){
-		echo "...";
+		echo "Records added successfully.";
 	} 
 	pg_close($link);
     ?>
+<table style=“width:100%”>
+<tr>
+<th>Invoice ID</th>
+<th>Product ID</th>
+<th>Customer ID</th>
+<th>Total Cost</th>
+<th>Date buy</th>
+</tr>
+<tr>
+<td><?php echo $_POST["pid"]; }?></td>
+<td><?php echo $_POST["pid"]; ?></td>
+<td><?php echo $_POST["cid"]; ?></td>
+<td><?php echo $_POST["price"]; ?></td>
+<td><?php echo $_POST["datebuy"];?></td>
+</tr>
+</table>
 
 </body>
 </html>
