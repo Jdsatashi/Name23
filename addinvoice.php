@@ -68,7 +68,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 <th>Date buy</th>
 </tr>
 <tr>
-<td></td>
+<td>hi</td>
 <td><?php echo $pid ?></td>
 <td><?php echo $cid ?></td>
 <td><?php echo $price ?></td>
