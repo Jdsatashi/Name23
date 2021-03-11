@@ -55,30 +55,7 @@ $query = 'SELECT pname,pcost, cname, phonenumber, invid from "product","customer
 	?>
 
 
-<table style=“width:100%”>
-<tr>
-<th>Invoice ID</th>
-<th>Product ID</th>
-<th>Product Name</th>
-<th>Product Cost</th>
-<th>Customer ID</th>
-<th>Customer Name</th>
-<th>Customer Phone Number</th>
-<th>Total Cost</th>
-<th>Date buy</th>
-</tr>
-<tr>
-<td><?php while ($row = pg_fetch_assoc($prod)) { echo $row['invid']; }?></td>
-<td><?php echo $_POST["pid"]; ?></td>
-<td><?php while ($row = pg_fetch_assoc($prod)) { echo $row['pname']; }?></td>
-<td><?php while ($row = pg_fetch_assoc($prod)) { echo $row['pcost']; }?></td>
-<td><?php echo $_POST["cid"]; ?></td>
-<td><?php while ($row = pg_fetch_assoc($prod)) { echo $row['cname']; }?></td>
-<td><?php while ($row = pg_fetch_assoc($prod)) { echo $row['phonenumber'];?></td>
-<td><?php echo $_POST["price"]; ?></td>
-<td><?php echo $_POST["datebuy"];?></td>
-</tr>
-</table>
+
 
     if(pg_query($link, $sql)){
 		echo "...";
