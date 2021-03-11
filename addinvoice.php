@@ -53,22 +53,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 		echo "Records added successfully.";
 	} 
     ?>
-<table style=“width:100%”>
-<tr>
-<th>Invoice ID</th>
-<th>Product ID</th>
-<th>Customer ID</th>
-<th>Total Cost</th>
-<th>Date buy</th>
-</tr>
-<tr>
-<td><?php echo $_POST["pid"]; }?></td>
-<td><?php echo $_POST["pid"]; ?></td>
-<td><?php echo $_POST["cid"]; ?></td>
-<td><?php echo $_POST["price"]; ?></td>
-<td><?php echo $_POST["datebuy"];?></td>
-</tr>
-</table>
+
 
 </body>
 </html>
