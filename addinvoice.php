@@ -30,7 +30,7 @@ th, td {
 	}
 	$i = 0;
 	
-	$invid = $_REQUEST["invid"];
+	//$invid = $_REQUEST["invid"];
     $cid = $_REQUEST["cid"];
     $pid = $_REQUEST["pid"];
 	$price = $_REQUEST["price"];
@@ -43,8 +43,8 @@ th, td {
 */
 
 
-$sql = 'INSERT INTO "invoice"("invid", "pid","cid","price","datebuy") VALUES ('."
-			'DEFAULT','$pid'::integer,'$cid'::integer, '$price'::integer,'$date'::date)".
+$sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
+			'$pid'::integer,'$cid'::integer, '$price'::integer,'$date'::date)".
 			 'returning *';
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
