@@ -28,7 +28,7 @@ th, td {
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-	$invid = $_REQUEST["invid"];
+	//$invid = $_REQUEST["invid"];
     $cid = $_REQUEST["cid"];
     $pid = $_REQUEST["pid"];
 	$price = $_REQUEST["price"];
@@ -42,7 +42,7 @@ th, td {
 
 
 $sql = 'INSERT INTO "invoice"("invid", "pid","cid","price","datebuy") VALUES ('."
-			'$invid'::integer,'$pid'::integer,'$cid'::integer, '$price'::integer,'$date'::date)".
+			'DEFAULT','$pid'::integer,'$cid'::integer, '$price'::integer,'$date'::date)".
 			 'returning "invid"';
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
