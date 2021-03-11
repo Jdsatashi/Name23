@@ -28,7 +28,7 @@ th, td {
 	} else {
 		echo "Connection to Heroku Postgres has been established";
 	}
-	$i = 0;
+
 	
 	//$invid = $_REQUEST["invid"];
     $cid = $_REQUEST["cid"];
@@ -55,7 +55,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 		echo "Records added successfully.";
 	} 
   
-	$query = 'SELECT MAX("invid") from "invoice"';
+	$query = 'SELECT MAX(invid) from "invoice"';
 	
     $prod = pg_query($link, $query);
 	?>
@@ -68,7 +68,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 <th>Date buy</th>
 </tr>
 <tr>
-<td><?php $row = pg_fetch_assoc($prod) echo $row['invid']; ?></td>
+<td></td>
 <td><?php echo $pid ?></td>
 <td><?php echo $cid ?></td>
 <td><?php echo $price ?></td>
