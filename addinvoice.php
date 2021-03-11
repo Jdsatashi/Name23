@@ -53,9 +53,9 @@ $sql = 'INSERT INTO "invoice"("invid", "pid","cid","price","datebuy") VALUES ('.
 		echo "Records added successfully.";
 	} 
   
-	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY invid';
+	//$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY invid';
 	
-    $prod = pg_query($link, $query);
+    //$prod = pg_query($link, $query);
 	?>
 <table style=“width:100%”>
 <tr>
