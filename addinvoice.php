@@ -1,5 +1,15 @@
 <html>
-
+<head>
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 30px;
+}
+</style>
+</head>
 <body>
 <p><a href="insertpro.php">Back</a></p>
 <h2>You have summitted the following to the server: </h2>
