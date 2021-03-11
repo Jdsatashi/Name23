@@ -12,7 +12,7 @@ th, td {
 </head>
 <body>
 <p><a href="insertpro.php">Back</a></p>
-<h2>You have summitted the following to the server: </h2>
+<h2>Payment successful </h2>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
     $dbname = "da79i3d6vat4tl";
@@ -25,9 +25,7 @@ th, td {
     
     if($link === false){
 		die("ERROR: Could not connect.");
-	} else {
-		echo "Connection to Heroku Postgres has been established";
-	}
+	} 
 
     $cid = $_REQUEST["cid"];
     $pid = $_REQUEST["pid"];
@@ -47,11 +45,10 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 
     //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     
-	echo $sql;
+
 	
-    if(pg_query($link, $sql)){
-		echo "Records added successfully.";
-	} 
+    pg_query($link, $sql)){
+
     ?>
 	
 <table style=“width:100%”>
@@ -66,7 +63,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 <td><?php echo $invid ?></td>
 <td><?php echo $pid ?></td>
 <td><?php echo $cid ?></td>
-<td><?php echo $pric ?></td>
+<td><?php echo $price ?></td>
 <td><?php echo $date?></td>
 </tr>
 </table>
