@@ -63,7 +63,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
     
-	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice';
+	$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY RANDOM() LIMIT 5';
 	
     $prod = pg_query($link, $query);
 	?>
