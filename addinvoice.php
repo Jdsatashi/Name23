@@ -55,9 +55,9 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 		echo "Records added successfully.";
 	} 
   
-	//$query = 'SELECT invid, pid, cid, price, datebuy FROM invoice ORDER BY invid';
+	$query = 'SELECT MAX("invid") from "invoice"';
 	
-    //$prod = pg_query($link, $query);
+    $prod = pg_query($link, $query);
 	?>
 <table style=“width:100%”>
 <tr>
@@ -68,7 +68,7 @@ $sql = 'INSERT INTO "invoice"("pid","cid","price","datebuy") VALUES ('."
 <th>Date buy</th>
 </tr>
 <tr>
-<td><?php echo $invid ?></td>
+<td><?php $row = pg_fetch_assoc($prod) echo $row['invid'] ?></td>
 <td><?php echo $pid ?></td>
 <td><?php echo $cid ?></td>
 <td><?php echo $price ?></td>
