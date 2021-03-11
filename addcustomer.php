@@ -1,6 +1,6 @@
 <html>
 <body>
-<p><a href="insertpro.php">Back</a></p>
+<p><a href="insertcus.php">Back</a></p>
 <h2>You have summitted the following to the server: </h2>
     <?php echo $_POST["cid"]; ?> <br>
     <?php echo $_POST["cname"]; ?> <br>
