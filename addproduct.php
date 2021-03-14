@@ -26,19 +26,13 @@
 	$detail = $_REQUEST["pdetail"];
     $cost = $_REQUEST["pcost"];
 	$img = $_REQUEST["pimg"];
-/*
-    $id = mysql_real_escape_string($link, $_REQUEST['pid']);
-    $name = mysql_real_escape_string($link, $_REQUEST['pname']);
-	$cate = mysql_real_escape_string($link, $_REQUEST['pcate']);
-    $cost = mysql_real_escape_string($link, $_REQUEST['pcost']);
-*/
+
 
 
 $sql = 'INSERT INTO "product"("pid","pname","pdetail","pcost","pimg") VALUES ('."
 			'$id'::integer,'$name'::character varying,'$detail'::character varying,'$cost'::integer,'$img'::character varying)".
 			 'returning "pid"';
 
-    //$mysqlquery = "INSERT INTO Product(pid, pname, pcate, pcost) VALUES ('$id', '$name', '$cate', '$cost')";
     
 	echo $sql;
 	
