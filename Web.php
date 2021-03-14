@@ -153,7 +153,7 @@ h2 {
 
 <div class="header">
   <h1 class="tim" 65px>Website Selling Toys Vietnam</h1>
-  <h2 class="tim" 40px>JDsatashi</h2>
+  <h2 class="tim" 40px>ATN Enterprise</h2>
 </div>
 
 <style>
