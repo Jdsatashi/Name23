@@ -3,19 +3,12 @@
 <head>
 <link rel="shortcut icon" href="img/Logoweb.jfif" type="image/png" />
 		<meta charset="utf-8" />
-		<title>
-			Figure Shop JDsatashi
-		</title>
-		</title>
+		<title>			Figure Shop JDsatashi		</title>
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-
 <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-
 <script src="bootstrap/bootstrap.min.js"></script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 .boder{
 border-top: #ff0000 dashed 5px
@@ -146,22 +139,17 @@ h2 {
 }
 </style>
 </head>
-
 <body>
-
 <div class="boder">
-
 <div class="header">
   <h1 class="tim" 65px>Website Selling Toys Vietnam</h1>
   <h2 class="tim" 40px>ATN Enterprise</h2>
 </div>
-
 <style>
 body {
     background-color: #B0FFEE;
 }
 </style>
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -189,10 +177,8 @@ body {
  <a href="#">
   Category Female Figure</a>
 </div>
-</div>
-      
-      </ul>
-      
+</div>     
+      </ul>   
       <ul class="nav navbar-nav navbar-right">
 	  <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -200,15 +186,12 @@ body {
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-        <li> <a href="#"> Login </a></li>
-      
+        <li> <a href="#"> Login </a></li>      
       </ul>
     </div>
   </div>
 </nav>
-
 <h3 class="bg-primary">JDsatashi Figure Shop have the best figures of Vietnam.</h3>
-
 <div class="slideshow-container">
   <div class="mySlides fade">
     <img src="img/lego.jpg" style="width:100%">
@@ -219,20 +202,17 @@ body {
     <img src="img/rubik.jpg" style="width:100%">
     <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
   </div>
- 
   <div class="mySlides fade">
     <img src="img/chess1.jpg" style="width:100%">
     <div class="text">Powered of God JD Satashi is Master of this web and this shop, the product is the best of the world, it could be punch your face!</div>
   </div>
 </div>
 <br>
- 
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(0)"></span> 
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
 </div>
-
 <script>
   var slideIndex;
   function showSlides() {
@@ -258,7 +238,6 @@ body {
     showSlides(slideIndex = n);
   }
 </script>
-
 <h3 class="bg-primary">What toys you want owned? Let's searching toys you like most.</h3>
     <?php
     $host = "ec2-34-201-248-246.compute-1.amazonaws.com";
@@ -288,11 +267,8 @@ while ($row = pg_fetch_row($prod)) { ?>
       </div>
     </div>		
   </div>
-
-
 <?php } ?>
-</div>	
-	
+</div>		
 <footer>
 	<div class="container-fluid" id="copyright">
 		<div class="row">
